@@ -1,6 +1,6 @@
 [build]
 command = "pip install -r requirements.txt"
 
-[deploy]
+[start]
 command = "python index.py"  # Замените на название вашего файла, если оно другое
 
