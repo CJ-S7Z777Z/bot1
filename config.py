@@ -4,15 +4,15 @@ import os
 import boto3
 import openai
 
-YANDEX_KEY_ID = os.environ.get("YANDEX_KEY_ID")
-YANDEX_KEY_SECRET = os.environ.get("YANDEX_KEY_SECRET")
-YANDEX_BUCKET = os.environ.get("YANDEX_BUCKET")
-PROXY_API_KEY = os.environ.get("PROXY_API_KEY")
+YANDEX_KEY_ID = os.environ.get("YCAJE5f86JUhAmY-N8sE5CuOI")
+YANDEX_KEY_SECRET = os.environ.get("YCMHmzb2jB7Fow4Ycxhr_sZ725d5WioTOV4goyO6")
+YANDEX_BUCKET = os.environ.get("class-22")
+PROXY_API_KEY = os.environ.get("sk-J8JiyQGDgKjqIch5fmpcMcQDQShH7nru")
 
-ASSISTANT_MODEL = os.environ.get("ASSISTANT_MODEL")
+ASSISTANT_MODEL = os.environ.get("gpt-4o-mini")
 
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")
-TG_BOT_ADMIN = os.environ.get("TG_BOT_ADMIN")
+TG_BOT_TOKEN = os.environ.get("7935626271:AAG42LHholTkVNOrsD1iHqXNCEpDfy_gQes")
+TG_BOT_ADMIN = os.environ.get("MWII_boss")
 
 
 def get_s3_client():
