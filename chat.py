@@ -8,7 +8,7 @@ def get_thread_id(chat_id: str):
         config["threads"] = {}
 
     if chat_id not in config["threads"]:
-        thread = proxy_client.beta.threads.create()
+        thread = client.beta.threads.create()
         config["threads"][chat_id] = thread.id
         save_config(config)
 
@@ -18,11 +18,11 @@ def get_thread_id(chat_id: str):
 def process_message(chat_id: str, message: str) -> list[str]:
     assistant_id = get_assistant_id()
     thread_id = get_thread_id(chat_id)
-    proxy_client.beta.threads.messages.create(
+    client.beta.threads.messages.create(
         thread_id=thread_id, content=message, role="user"
     )
 
-    run = proxy_client.beta.threads.runs.create_and_poll(
+    run = client.beta.threads.runs.create_and_poll(
         thread_id=thread_id,
         assistant_id=assistant_id,
     )
@@ -30,7 +30,7 @@ def process_message(chat_id: str, message: str) -> list[str]:
     answer = []
 
     if run.status == "completed":
-        messages = proxy_client.beta.threads.messages.list(
+        messages = client.beta.threads.messages.list(
             thread_id=thread_id, run_id=run.id
         )
         for message in messages:
