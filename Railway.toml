@@ -2,4 +2,4 @@
 command = "pip install -r requirements.txt"
 
 [deploy]
-command = "python index.py"  # Замените на название вашего файла, если оно другое
+command = "python config.py"  # Замените на название вашего файла, если оно другое
