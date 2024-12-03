@@ -1,5 +1,5 @@
 from admin import get_assistant_id
-from config import get_config, proxy_client, save_config
+from config import get_config, client, save_config
 
 
 def get_thread_id(chat_id: str):
