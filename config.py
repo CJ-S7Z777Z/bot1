@@ -40,7 +40,7 @@ def save_config(new_config: dict):
     )
 
 
-proxy_client = openai.Client(
+client = OpenAI(
     api_key=PROXY_API_KEY,
     base_url="https://api.proxyapi.ru/openai/v1",
 )
